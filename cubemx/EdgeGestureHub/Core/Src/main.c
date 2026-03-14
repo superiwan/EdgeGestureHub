@@ -16,96 +16,77 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-/* 头文件 ------------------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
 
-/* 私有头文件 ----------------------------------------------------------*/
+/* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "app_task.h"
-#include <stdio.h>
-#include <string.h>
-
 /* USER CODE END Includes */
 
-/* 私有类型定义 -----------------------------------------------------------*/
+/* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
 
-/* 私有宏定义 ------------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define USER_LED_GPIO_PORT GPIOD
-#define USER_LED_GPIO_PIN  GPIO_PIN_12
-
 /* USER CODE END PD */
 
-/* 私有宏 -------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
 /* USER CODE END PM */
 
-/* 私有变量 ---------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
-/* 私有函数声明 -----------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
-/* 私有用户代码 ---------------------------------------------------------*/
+/* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
 /* USER CODE END 0 */
 
 /**
-  * @brief  应用程序入口点。
+  * @brief  The application entry point.
   * @retval int
   */
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
-  /* MCU 配置--------------------------------------------------------*/
+  /* MCU Configuration--------------------------------------------------------*/
 
-  /* 复位所有外设，初始化 Flash 接口与 SysTick。 */
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
-  /* 配置系统时钟 */
+  /* Configure the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
 
-  /* 初始化所有已配置外设 */
+  /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C1_Init();
+  MX_I2C2_Init();
   MX_USART1_UART_Init();
+
   /* USER CODE BEGIN 2 */
   App_Init();
-  {
-    const char *boot_msg = "EdgeGestureHub boot ok\r\n";
-    HAL_UART_Transmit(&huart1, (uint8_t *)boot_msg, (uint16_t)strlen(boot_msg), 100);
-    HAL_GPIO_WritePin(USER_LED_GPIO_PORT, USER_LED_GPIO_PIN, GPIO_PIN_RESET);
-  }
-
   /* USER CODE END 2 */
 
-  /* 无限循环 */
+  /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
@@ -113,62 +94,12 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     App_Loop();
-
-    static uint32_t last_tick = 0;
-    static uint32_t beat = 0;
-    static uint32_t last_pwm_ms = 0;
-    static uint32_t last_breath_ms = 0;
-    static uint8_t pwm_counter = 0;
-    static uint8_t duty = 0;
-    static int8_t duty_step = 1;
-    uint32_t now = HAL_GetTick();
-
-    if (now - last_pwm_ms >= 1U)
-    {
-      last_pwm_ms = now;
-      pwm_counter = (uint8_t)((pwm_counter + 1U) % 100U);
-      if (pwm_counter < duty)
-      {
-        HAL_GPIO_WritePin(USER_LED_GPIO_PORT, USER_LED_GPIO_PIN, GPIO_PIN_SET);
-      }
-      else
-      {
-        HAL_GPIO_WritePin(USER_LED_GPIO_PORT, USER_LED_GPIO_PIN, GPIO_PIN_RESET);
-      }
-    }
-
-    if (now - last_breath_ms >= 15U)
-    {
-      last_breath_ms = now;
-      if (duty >= 99U)
-      {
-        duty = 99U;
-        duty_step = -1;
-      }
-      else if (duty == 0U)
-      {
-        duty_step = 1;
-      }
-      duty = (uint8_t)(duty + duty_step);
-    }
-
-    if (now - last_tick >= 1000U)
-    {
-      char msg[64];
-      int len = snprintf(msg, sizeof(msg), "tick=%lu beat=%lu duty=%u\r\n",
-                         (unsigned long)now, (unsigned long)beat++, duty);
-      if (len > 0)
-      {
-        HAL_UART_Transmit(&huart1, (uint8_t *)msg, (uint16_t)len, 100);
-      }
-      last_tick = now;
-    }
+    /* USER CODE END 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**
-  * @brief 系统时钟配置
+  * @brief System Clock Configuration
   * @retval None
   */
 void SystemClock_Config(void)
@@ -176,13 +107,13 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** 配置主内部稳压器输出电压
+  /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-  /** 根据指定参数初始化 RCC 振荡器
-  * （参数位于 RCC_OscInitTypeDef 结构体中）。
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -197,7 +128,7 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
-  /** 初始化 CPU、AHB 与 APB 总线时钟
+  /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -213,17 +144,15 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
 /* USER CODE END 4 */
 
 /**
-  * @brief  当发生错误时执行此函数。
+  * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* 用户可在此添加自定义实现，用于上报 HAL 错误返回状态 */
   __disable_irq();
   while (1)
   {
@@ -233,7 +162,7 @@ void Error_Handler(void)
 
 #ifdef  USE_FULL_ASSERT
 /**
-  * @brief  报告源文件名与源码行号
+  * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
   * @param  file: pointer to the source file name
   * @param  line: assert_param error line source number
@@ -247,14 +176,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-
-
-
-
-
-
-
-
-
-

@@ -1,43 +1,39 @@
 ﻿# Project Handoff - EdgeGestureHub
 
 ## 1) Project Goal
-Build an STM32F4-based EdgeGestureHub demo that reads MPU6050 motion data, shows status on SSD1306 OLED, streams telemetry over UART (FireWater format), and then evolves from threshold-based gesture recognition to optional AI inference.
+Build an STM32F4-based EdgeGestureHub demo that reads MPU6050 data, shows gesture text on OLED, and streams telemetry to VOFA+ for threshold/AI workflow.
 
 ## 2) Current Status
-- Workspace has CubeMX project at `cubemx/EdgeGestureHub` and Keil project at `cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub.uvprojx`.
-- `main.c` is integrated with app loop (`App_Init()` and `App_Loop()` are called).
-- Keil/ST-Link pipeline has been exercised before; documented build/flash success exists.
-- Driver implementation is still stubbed:
-  - `Drivers/BSP/Src/mpu6050.c` currently returns mock values.
-  - `Drivers/BSP/Src/ssd1306.c` currently contains no real display transfer logic.
-- No unified handoff file existed before this thread; this file is now the canonical handoff entry.
+- Hardware wiring is now back to formal topology:
+  - MPU6050 -> I2C1 (PB6/PB7)
+  - OLED -> I2C2 (PB10/PB11)
+- `mpu6050.c` remains real implementation (init/read/convert).
+- `ssd1306.c` has been simplified to hardware I2C2 only (removed temporary probe/debug path).
+- `app_task.c` removed temporary bus-scan diag output and restored business loop only.
+- `main.c` removed temporary tick/heartbeat test output and keeps clean `App_Init()/App_Loop()` flow.
+- Build + flash completed successfully (`0 errors, 0 warnings`).
 
 ## 3) Important Paths
 - Workspace root: `C:/Users/prohibit/Desktop/stm32f4_project`
-- CubeMX project: `cubemx/EdgeGestureHub/EdgeGestureHub.ioc`
 - Firmware entry: `cubemx/EdgeGestureHub/Core/Src/main.c`
+- App task: `cubemx/EdgeGestureHub/Core/Src/app_task.c`
+- I2C init: `cubemx/EdgeGestureHub/Core/Src/i2c.c`
 - MPU6050 driver: `cubemx/EdgeGestureHub/Drivers/BSP/Src/mpu6050.c`
 - SSD1306 driver: `cubemx/EdgeGestureHub/Drivers/BSP/Src/ssd1306.c`
 - Keil project: `cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub.uvprojx`
 - Pipeline scripts: `scripts/build-keil.ps1`, `scripts/flash-stlink.ps1`, `scripts/dev-all.ps1`
-- Prior troubleshooting notes:
-  - `EdgeGestureHub_问题排查记录.md`
-  - `stm32-keil-stlink-pipeline_问题与修改记录.md`
 
 ## 4) Environment and Tooling Notes
 - Windows + PowerShell workflow.
-- This directory is **not** a Git repo currently.
-- `rg` may be unavailable in this shell; use PowerShell file enumeration when needed.
-- Keil stability depends on opening workflow and Debug/Utilities settings (see troubleshooting note).
-- A path referenced by `AGENTS.md` (`project-skills/edgegesture-handoff/...`) is currently missing in workspace.
+- This directory is not a Git repo.
+- `AGENTS.md` references `project-skills/edgegesture-handoff/...` paths that are missing in this workspace.
 
 ## 5) Known Pitfalls
-- Keil command return code can be non-zero even when build log shows `0 Error(s)`.
-- Debug/flash failures can happen if Keil project carries wrong DLL/debugger state across sessions.
-- Pipeline templates may assume `Objects/Project.*` outputs while this project uses `EdgeGestureHub/EdgeGestureHub.*` outputs.
+- Keil occasionally returns non-zero even when no compile error; verify by log content.
+- If OLED no display again, first verify module mode and pin order before changing firmware.
 
 ## 6) Exact Next Step
-Implement real `MPU6050_Init()` and `MPU6050_ReadFrame()` in `cubemx/EdgeGestureHub/Drivers/BSP/Src/mpu6050.c`, then validate live `ax,ay,az,gx,gy,gz` UART output (115200, FireWater) before touching OLED/gesture thresholds.
+Reconnect full device stack and run serial monitor/VOFA+ to tune gesture thresholds using live MPU data (OLED should already follow gesture label updates).
 
 ## 7) Recent Thread Note
-User invoked `$project-thread-handoff`; created this first canonical handoff file after checking existing docs and confirming that handoff references in `AGENTS.md` are missing from workspace.
+Switched firmware from temporary debug branch back to production wiring (MPU on I2C1, OLED on I2C2), removed test telemetry, and reflashed successfully.

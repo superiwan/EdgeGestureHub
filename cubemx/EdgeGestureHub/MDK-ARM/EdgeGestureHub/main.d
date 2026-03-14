@@ -35,5 +35,3 @@ edgegesturehub\main.o: ../Core/Inc/i2c.h
 edgegesturehub\main.o: ../Core/Inc/usart.h
 edgegesturehub\main.o: ../Core/Inc/gpio.h
 edgegesturehub\main.o: ../Core/Inc/app_task.h
-edgegesturehub\main.o: C:\Keil5\ARM\ARMCC\ARM\ARMCC\Bin\..\include\stdio.h
-edgegesturehub\main.o: C:\Keil5\ARM\ARMCC\ARM\ARMCC\Bin\..\include\string.h

@@ -10,12 +10,12 @@ void FireWater_SendFrame(UART_HandleTypeDef *huart,
   char line[160];
 
   /*
-   * FireWater 文本协议（一行一帧）：
-   *  ax:...,ay:...,az:...,gx:...,gy:...,gz:...,cls:...\n
-   * VOFA+ 中可按字段名直接建通道观察。
+   * VOFA+ FireWater 推荐格式：纯 CSV（不带 key）。
+   * 通道映射：
+   *   I0=ax, I1=ay, I2=az, I3=gx, I4=gy, I5=gz, I6=cls
    */
   int n = snprintf(line, sizeof(line),
-                   "ax:%.3f,ay:%.3f,az:%.3f,gx:%.3f,gy:%.3f,gz:%.3f,cls:%d\n",
+                   "%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%d\n",
                    ax, ay, az, gx, gy, gz, cls);
 
   if (n > 0) {

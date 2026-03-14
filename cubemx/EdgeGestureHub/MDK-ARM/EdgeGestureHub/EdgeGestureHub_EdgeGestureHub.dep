@@ -1,7 +1,7 @@
 Dependencies for Project 'EdgeGestureHub', Target 'EdgeGestureHub': (DO NOT MODIFY !)
 CompilerVersion: 5060528::V5.06 update 5 (build 528)::.\ARMCC\ARM\ARMCC
 F (startup_stm32f407xx.s)(0x69B02A54)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 541" --pd "STM32F407xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f407xx.lst --xref -o edgegesturehub\startup_stm32f407xx.o --depend edgegesturehub\startup_stm32f407xx.d)
-F (../Core/Src/main.c)(0x69B4EB41)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\main.o --omf_browse edgegesturehub\main.crf --depend edgegesturehub\main.d)
+F (../Core/Src/main.c)(0x69B51A33)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\main.o --omf_browse edgegesturehub\main.crf --depend edgegesturehub\main.d)
 I (../Core/Inc/main.h)(0x69B02A51)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
@@ -33,12 +33,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x69B02A3F)
-I (../Core/Inc/i2c.h)(0x69B02A4E)
+I (../Core/Inc/i2c.h)(0x69B4FD92)
 I (../Core/Inc/usart.h)(0x69B02A4F)
 I (../Core/Inc/gpio.h)(0x69B02A4D)
 I (../Core/Inc/app_task.h)(0x69B00FA7)
-I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\string.h)(0x588B8344)
 F (../Core/Src/gpio.c)(0x69B4EB23)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\gpio.o --omf_browse edgegesturehub\gpio.crf --depend edgegesturehub\gpio.d)
 I (../Core/Inc/gpio.h)(0x69B02A4D)
 I (../Core/Inc/main.h)(0x69B02A51)
@@ -72,8 +70,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x69B02A3F)
-F (../Core/Src/i2c.c)(0x69B4EB23)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\i2c.o --omf_browse edgegesturehub\i2c.crf --depend edgegesturehub\i2c.d)
-I (../Core/Inc/i2c.h)(0x69B02A4E)
+F (../Core/Src/i2c.c)(0x69B519E7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\i2c.o --omf_browse edgegesturehub\i2c.crf --depend edgegesturehub\i2c.d)
+I (../Core/Inc/i2c.h)(0x69B4FD92)
 I (../Core/Inc/main.h)(0x69B02A51)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
@@ -203,11 +201,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x69B02A3F)
-F (../Core/Src/app_task.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\app_task.o --omf_browse edgegesturehub\app_task.crf --depend edgegesturehub\app_task.d)
+F (../Core/Src/app_task.c)(0x69B519CC)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\app_task.o --omf_browse edgegesturehub\app_task.crf --depend edgegesturehub\app_task.d)
 I (../Core/Inc/app_task.h)(0x69B00FA7)
-I (../Core/Inc/app_config.h)(0x69B00FA7)
-I (../Core/Inc/gesture_engine.h)(0x69B00FA7)
-I (../Core/Inc/firewater.h)(0x69B00FA7)
+I (../Core/Inc/app_config.h)(0x69B4EEC0)
+I (../Core/Inc/gesture_engine.h)(0x69B4EED6)
+I (../Core/Inc/firewater.h)(0x69B4EECA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x69B02A3F)
@@ -243,12 +241,12 @@ I (../Core/Inc/imu_service.h)(0x69B00FA7)
 I (../Core/Inc/oled_service.h)(0x69B00FA7)
 I (../Core/Inc/usart.h)(0x69B02A4F)
 I (../Core/Inc/main.h)(0x69B02A51)
-F (../Core/Src/control_logic.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\control_logic.o --omf_browse edgegesturehub\control_logic.crf --depend edgegesturehub\control_logic.d)
+F (../Core/Src/control_logic.c)(0x69B4EEAD)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\control_logic.o --omf_browse edgegesturehub\control_logic.crf --depend edgegesturehub\control_logic.d)
 I (../Core/Inc/control_logic.h)(0x69B00FA7)
-I (../Core/Inc/gesture_engine.h)(0x69B00FA7)
+I (../Core/Inc/gesture_engine.h)(0x69B4EED6)
 I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (../Core/Src/firewater.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\firewater.o --omf_browse edgegesturehub\firewater.crf --depend edgegesturehub\firewater.d)
-I (../Core/Inc/firewater.h)(0x69B00FA7)
+F (../Core/Src/firewater.c)(0x69B501EB)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\firewater.o --omf_browse edgegesturehub\firewater.crf --depend edgegesturehub\firewater.d)
+I (../Core/Inc/firewater.h)(0x69B4EECA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x69B02A3F)
@@ -281,20 +279,22 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x69B02A3F)
 I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\string.h)(0x588B8344)
-F (../Core/Src/gesture_engine.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\gesture_engine.o --omf_browse edgegesturehub\gesture_engine.crf --depend edgegesturehub\gesture_engine.d)
-I (../Core/Inc/gesture_engine.h)(0x69B00FA7)
+F (../Core/Src/gesture_engine.c)(0x69B50253)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\gesture_engine.o --omf_browse edgegesturehub\gesture_engine.crf --depend edgegesturehub\gesture_engine.d)
+I (../Core/Inc/gesture_engine.h)(0x69B4EED6)
 I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\math.h)(0x588B8344)
-F (../Core/Src/imu_service.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\imu_service.o --omf_browse edgegesturehub\imu_service.crf --depend edgegesturehub\imu_service.d)
+I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (../Core/Src/imu_service.c)(0x69B4EE92)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\imu_service.o --omf_browse edgegesturehub\imu_service.crf --depend edgegesturehub\imu_service.d)
 I (../Core/Inc/imu_service.h)(0x69B00FA7)
-I (../Core/Inc/gesture_engine.h)(0x69B00FA7)
+I (../Core/Inc/gesture_engine.h)(0x69B4EED6)
 I (../Drivers/BSP/Inc/mpu6050.h)(0x69B00FA7)
-F (../Core/Src/oled_service.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\oled_service.o --omf_browse edgegesturehub\oled_service.crf --depend edgegesturehub\oled_service.d)
+F (../Core/Src/oled_service.c)(0x69B4EEA2)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\oled_service.o --omf_browse edgegesturehub\oled_service.crf --depend edgegesturehub\oled_service.d)
 I (../Core/Inc/oled_service.h)(0x69B00FA7)
-I (../Drivers/BSP/Inc/ssd1306.h)(0x69B00FA7)
-F (../Drivers/BSP/Src/mpu6050.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\mpu6050.o --omf_browse edgegesturehub\mpu6050.crf --depend edgegesturehub\mpu6050.d)
+I (../Drivers/BSP/Inc/ssd1306.h)(0x69B509E9)
+I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (../Drivers/BSP/Src/mpu6050.c)(0x69B4F635)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\mpu6050.o --omf_browse edgegesturehub\mpu6050.crf --depend edgegesturehub\mpu6050.d)
 I (../Drivers/BSP/Inc/mpu6050.h)(0x69B00FA7)
-I (../Core/Inc/gesture_engine.h)(0x69B00FA7)
-I (../Core/Inc/i2c.h)(0x69B02A4E)
+I (../Core/Inc/gesture_engine.h)(0x69B4EED6)
+I (../Core/Inc/i2c.h)(0x69B4FD92)
 I (../Core/Inc/main.h)(0x69B02A51)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
@@ -326,8 +326,41 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x69B02A3F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x69B02A3F)
-F (../Drivers/BSP/Src/ssd1306.c)(0x69B00FA7)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\ssd1306.o --omf_browse edgegesturehub\ssd1306.crf --depend edgegesturehub\ssd1306.d)
-I (../Drivers/BSP/Inc/ssd1306.h)(0x69B00FA7)
+F (../Drivers/BSP/Src/ssd1306.c)(0x69B51ADC)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\ssd1306.o --omf_browse edgegesturehub\ssd1306.crf --depend edgegesturehub\ssd1306.d)
+I (../Drivers/BSP/Inc/ssd1306.h)(0x69B509E9)
+I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (../Core/Inc/i2c.h)(0x69B4FD92)
+I (../Core/Inc/main.h)(0x69B02A51)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x69B02A3F)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x69B02A40)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x69B02A3F)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x69B02A40)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x69B02A40)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x69B02A40)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x69B02A40)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x69B02A40)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x69B02A3F)
+I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x69B02A3F)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x69B02A3F)
+I (C:\Keil5\ARM\ARMCC\ARM\ARMCC\include\string.h)(0x588B8344)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x69B02A3E)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/BSP/Inc-I.\RTE\_EdgeGestureHub-IC:\Keil5\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o edgegesturehub\stm32f4xx_hal_i2c.o --omf_browse edgegesturehub\stm32f4xx_hal_i2c.crf --depend edgegesturehub\stm32f4xx_hal_i2c.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x69B02A3F)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x69B02A50)
