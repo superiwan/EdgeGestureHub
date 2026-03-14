@@ -1,9 +1,9 @@
-/* USER CODE BEGIN Header */
+﻿/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    i2c.c
-  * @brief   This file provides code for the configuration
-  *          of the I2C instances.
+  * @brief   本文件提供以下配置代码
+  *          用于 I2C 外设实例。
   ******************************************************************************
   * @attention
   *
@@ -17,7 +17,7 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
+/* 头文件 ------------------------------------------------------------------*/
 #include "i2c.h"
 
 /* USER CODE BEGIN 0 */
@@ -26,7 +26,7 @@
 
 I2C_HandleTypeDef hi2c1;
 
-/* I2C1 init function */
+/* I2C1 初始化函数 */
 void MX_I2C1_Init(void)
 {
 
@@ -67,7 +67,7 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
   /* USER CODE END I2C1_MspInit 0 */
 
     __HAL_RCC_GPIOB_CLK_ENABLE();
-    /**I2C1 GPIO Configuration
+    /**I2C1 GPIO 配置
     PB6     ------> I2C1_SCL
     PB7     ------> I2C1_SDA
     */
@@ -78,7 +78,7 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
     GPIO_InitStruct.Alternate = GPIO_AF4_I2C1;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    /* I2C1 clock enable */
+    /* 使能 I2C1 时钟 */
     __HAL_RCC_I2C1_CLK_ENABLE();
   /* USER CODE BEGIN I2C1_MspInit 1 */
 
@@ -94,10 +94,10 @@ void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
   /* USER CODE BEGIN I2C1_MspDeInit 0 */
 
   /* USER CODE END I2C1_MspDeInit 0 */
-    /* Peripheral clock disable */
+    /* 关闭外设时钟 */
     __HAL_RCC_I2C1_CLK_DISABLE();
 
-    /**I2C1 GPIO Configuration
+    /**I2C1 GPIO 配置
     PB6     ------> I2C1_SCL
     PB7     ------> I2C1_SDA
     */
@@ -114,3 +114,5 @@ void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
+
+

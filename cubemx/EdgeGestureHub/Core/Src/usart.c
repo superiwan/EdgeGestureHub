@@ -1,9 +1,9 @@
-/* USER CODE BEGIN Header */
+﻿/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    usart.c
-  * @brief   This file provides code for the configuration
-  *          of the USART instances.
+  * @brief   本文件提供以下配置代码
+  *          用于 USART 外设实例。
   ******************************************************************************
   * @attention
   *
@@ -17,7 +17,7 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
+/* 头文件 ------------------------------------------------------------------*/
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
@@ -26,7 +26,7 @@
 
 UART_HandleTypeDef huart1;
 
-/* USART1 init function */
+/* USART1 初始化函数 */
 
 void MX_USART1_UART_Init(void)
 {
@@ -65,11 +65,11 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
   /* USER CODE BEGIN USART1_MspInit 0 */
 
   /* USER CODE END USART1_MspInit 0 */
-    /* USART1 clock enable */
+    /* 使能 USART1 时钟 */
     __HAL_RCC_USART1_CLK_ENABLE();
 
     __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**USART1 GPIO Configuration
+    /**USART1 GPIO 配置
     PA9     ------> USART1_TX
     PA10     ------> USART1_RX
     */
@@ -94,10 +94,10 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
   /* USER CODE BEGIN USART1_MspDeInit 0 */
 
   /* USER CODE END USART1_MspDeInit 0 */
-    /* Peripheral clock disable */
+    /* 关闭外设时钟 */
     __HAL_RCC_USART1_CLK_DISABLE();
 
-    /**USART1 GPIO Configuration
+    /**USART1 GPIO 配置
     PA9     ------> USART1_TX
     PA10     ------> USART1_RX
     */
@@ -112,3 +112,5 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
+
+

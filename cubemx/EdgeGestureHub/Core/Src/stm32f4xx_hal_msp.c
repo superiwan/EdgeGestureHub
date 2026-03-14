@@ -1,9 +1,9 @@
-/* USER CODE BEGIN Header */
+﻿/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file         stm32f4xx_hal_msp.c
-  * @brief        This file provides code for the MSP Initialization
-  *               and de-Initialization codes.
+  * @brief        本文件提供 MSP 初始化
+  *               及反初始化代码。
   ******************************************************************************
   * @attention
   *
@@ -18,38 +18,38 @@
   */
 /* USER CODE END Header */
 
-/* Includes ------------------------------------------------------------------*/
+/* 头文件 ------------------------------------------------------------------*/
 #include "main.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-/* Private typedef -----------------------------------------------------------*/
+/* 私有类型定义 -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
 
 /* USER CODE END TD */
 
-/* Private define ------------------------------------------------------------*/
+/* 私有宏定义 ------------------------------------------------------------*/
 /* USER CODE BEGIN Define */
 
 /* USER CODE END Define */
 
-/* Private macro -------------------------------------------------------------*/
+/* 私有宏 -------------------------------------------------------------*/
 /* USER CODE BEGIN Macro */
 
 /* USER CODE END Macro */
 
-/* Private variables ---------------------------------------------------------*/
+/* 私有变量 ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
 
-/* Private function prototypes -----------------------------------------------*/
+/* 私有函数声明 -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
-/* External functions --------------------------------------------------------*/
+/* 外部函数 --------------------------------------------------------*/
 /* USER CODE BEGIN ExternalFunctions */
 
 /* USER CODE END ExternalFunctions */
@@ -58,7 +58,7 @@
 
 /* USER CODE END 0 */
 /**
-  * Initializes the Global MSP.
+  * 初始化全局 MSP。
   */
 void HAL_MspInit(void)
 {
@@ -70,7 +70,7 @@ void HAL_MspInit(void)
   __HAL_RCC_SYSCFG_CLK_ENABLE();
   __HAL_RCC_PWR_CLK_ENABLE();
 
-  /* System interrupt init*/
+  /* 系统中断初始化*/
 
   /* USER CODE BEGIN MspInit 1 */
 
@@ -80,3 +80,4 @@ void HAL_MspInit(void)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
+

@@ -1,4 +1,4 @@
-/**
+﻿/**
   ******************************************************************************
   * @file    system_stm32f4xx.c
   * @author  MCD Application Team
@@ -296,7 +296,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOD->MODER   = 0xAAAA0A8A;
   /* Configure PDx pins speed to 100 MHz */  
   GPIOD->OSPEEDR = 0xFFFF0FCF;
-  /* Configure PDx pins Output type to push-pull */  
+  /* Configure PDx pins 输出 type to push-pull */  
   GPIOD->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PDx pins */ 
   GPIOD->PUPDR   = 0x00000000;
@@ -308,7 +308,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOE->MODER   = 0xAAAA828A;
   /* Configure PEx pins speed to 100 MHz */ 
   GPIOE->OSPEEDR = 0xFFFFC3CF;
-  /* Configure PEx pins Output type to push-pull */  
+  /* Configure PEx pins 输出 type to push-pull */  
   GPIOE->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PEx pins */ 
   GPIOE->PUPDR   = 0x00000000;
@@ -320,7 +320,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOF->MODER   = 0xAA800AAA;
   /* Configure PFx pins speed to 50 MHz */ 
   GPIOF->OSPEEDR = 0xAA800AAA;
-  /* Configure PFx pins Output type to push-pull */  
+  /* Configure PFx pins 输出 type to push-pull */  
   GPIOF->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PFx pins */ 
   GPIOF->PUPDR   = 0x00000000;
@@ -332,7 +332,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOG->MODER   = 0xAAAAAAAA;
   /* Configure PGx pins speed to 50 MHz */ 
   GPIOG->OSPEEDR = 0xAAAAAAAA;
-  /* Configure PGx pins Output type to push-pull */  
+  /* Configure PGx pins 输出 type to push-pull */  
   GPIOG->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PGx pins */ 
   GPIOG->PUPDR   = 0x00000000;
@@ -344,7 +344,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOH->MODER   = 0xAAAA08A0;
   /* Configure PHx pins speed to 50 MHz */ 
   GPIOH->OSPEEDR = 0xAAAA08A0;
-  /* Configure PHx pins Output type to push-pull */  
+  /* Configure PHx pins 输出 type to push-pull */  
   GPIOH->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PHx pins */ 
   GPIOH->PUPDR   = 0x00000000;
@@ -356,7 +356,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOI->MODER   = 0x0028AAAA;
   /* Configure PIx pins speed to 50 MHz */ 
   GPIOI->OSPEEDR = 0x0028AAAA;
-  /* Configure PIx pins Output type to push-pull */  
+  /* Configure PIx pins 输出 type to push-pull */  
   GPIOI->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PIx pins */ 
   GPIOI->PUPDR   = 0x00000000;
@@ -471,7 +471,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOA->MODER   |= 0x00008000;
   /* Configure PDx pins speed to 50 MHz */
   GPIOA->OSPEEDR |= 0x00008000;
-  /* Configure PDx pins Output type to push-pull */
+  /* Configure PDx pins 输出 type to push-pull */
   GPIOA->OTYPER  |= 0x00000000;
   /* No pull-up, pull-down for PDx pins */
   GPIOA->PUPDR   |= 0x00000000;
@@ -483,7 +483,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOC->MODER   |= 0x00000A00;
   /* Configure PDx pins speed to 50 MHz */
   GPIOC->OSPEEDR |= 0x00000A00;
-  /* Configure PDx pins Output type to push-pull */
+  /* Configure PDx pins 输出 type to push-pull */
   GPIOC->OTYPER  |= 0x00000000;
   /* No pull-up, pull-down for PDx pins */
   GPIOC->PUPDR   |= 0x00000000;
@@ -496,7 +496,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOD->MODER   = 0xA02A000A;
   /* Configure PDx pins speed to 50 MHz */  
   GPIOD->OSPEEDR = 0xA02A000A;
-  /* Configure PDx pins Output type to push-pull */  
+  /* Configure PDx pins 输出 type to push-pull */  
   GPIOD->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PDx pins */ 
   GPIOD->PUPDR   = 0x00000000;
@@ -508,7 +508,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOE->MODER   = 0xAAAA800A;
   /* Configure PEx pins speed to 50 MHz */ 
   GPIOE->OSPEEDR = 0xAAAA800A;
-  /* Configure PEx pins Output type to push-pull */  
+  /* Configure PEx pins 输出 type to push-pull */  
   GPIOE->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PEx pins */ 
   GPIOE->PUPDR   = 0x00000000;
@@ -520,7 +520,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOF->MODER   = 0xAA800AAA;
   /* Configure PFx pins speed to 50 MHz */ 
   GPIOF->OSPEEDR = 0xAA800AAA;
-  /* Configure PFx pins Output type to push-pull */  
+  /* Configure PFx pins 输出 type to push-pull */  
   GPIOF->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PFx pins */ 
   GPIOF->PUPDR   = 0x00000000;
@@ -532,7 +532,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOG->MODER   = 0xAAAAAAAA;
   /* Configure PGx pins speed to 50 MHz */ 
   GPIOG->OSPEEDR = 0xAAAAAAAA;
-  /* Configure PGx pins Output type to push-pull */  
+  /* Configure PGx pins 输出 type to push-pull */  
   GPIOG->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PGx pins */ 
   GPIOG->PUPDR   = 0x00000000;
@@ -546,7 +546,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOH->MODER   = 0xAAAA08A0;
   /* Configure PHx pins speed to 50 MHz */ 
   GPIOH->OSPEEDR = 0xAAAA08A0;
-  /* Configure PHx pins Output type to push-pull */  
+  /* Configure PHx pins 输出 type to push-pull */  
   GPIOH->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PHx pins */ 
   GPIOH->PUPDR   = 0x00000000;
@@ -558,7 +558,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOI->MODER   = 0x0028AAAA;
   /* Configure PIx pins speed to 50 MHz */ 
   GPIOI->OSPEEDR = 0x0028AAAA;
-  /* Configure PIx pins Output type to push-pull */  
+  /* Configure PIx pins 输出 type to push-pull */  
   GPIOI->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PIx pins */ 
   GPIOI->PUPDR   = 0x00000000;
@@ -657,7 +657,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOD->MODER   = 0xAAAA0A8A;
   /* Configure PDx pins speed to 100 MHz */  
   GPIOD->OSPEEDR = 0xFFFF0FCF;
-  /* Configure PDx pins Output type to push-pull */  
+  /* Configure PDx pins 输出 type to push-pull */  
   GPIOD->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PDx pins */ 
   GPIOD->PUPDR   = 0x00000000;
@@ -669,7 +669,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOE->MODER   = 0xAAAA828A;
   /* Configure PEx pins speed to 100 MHz */ 
   GPIOE->OSPEEDR = 0xFFFFC3CF;
-  /* Configure PEx pins Output type to push-pull */  
+  /* Configure PEx pins 输出 type to push-pull */  
   GPIOE->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PEx pins */ 
   GPIOE->PUPDR   = 0x00000000;
@@ -681,7 +681,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOF->MODER   = 0xAA000AAA;
   /* Configure PFx pins speed to 100 MHz */ 
   GPIOF->OSPEEDR = 0xFF000FFF;
-  /* Configure PFx pins Output type to push-pull */  
+  /* Configure PFx pins 输出 type to push-pull */  
   GPIOF->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PFx pins */ 
   GPIOF->PUPDR   = 0x00000000;
@@ -693,7 +693,7 @@ void SystemInit_ExtMemCtl(void)
   GPIOG->MODER   = 0x00085AAA;
   /* Configure PGx pins speed to 100 MHz */ 
   GPIOG->OSPEEDR = 0x000CAFFF;
-  /* Configure PGx pins Output type to push-pull */  
+  /* Configure PGx pins 输出 type to push-pull */  
   GPIOG->OTYPER  = 0x00000000;
   /* No pull-up, pull-down for PGx pins */ 
   GPIOG->PUPDR   = 0x00000000;
@@ -745,3 +745,4 @@ void SystemInit_ExtMemCtl(void)
 /**
   * @}
   */
+
