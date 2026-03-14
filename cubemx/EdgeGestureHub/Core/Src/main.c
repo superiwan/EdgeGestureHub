@@ -81,6 +81,7 @@ int main(void)
   MX_I2C1_Init();
   MX_I2C2_Init();
   MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
   App_Init();
@@ -176,3 +177,6 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+
+

@@ -36,7 +36,12 @@ void App_Loop(void)
 
   if ((now - t_uart) >= APP_UART_PERIOD_MS) {
     t_uart = now;
+    /* 同时输出到 USB 串口(USART1) 与无线串口(USART2)。 */
     FireWater_SendFrame(&huart1,
+                        s_cache.ax, s_cache.ay, s_cache.az,
+                        s_cache.gx, s_cache.gy, s_cache.gz,
+                        (int)s_last);
+    FireWater_SendFrame(&huart2,
                         s_cache.ax, s_cache.ay, s_cache.az,
                         s_cache.gx, s_cache.gy, s_cache.gz,
                         (int)s_last);

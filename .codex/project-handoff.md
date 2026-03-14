@@ -37,3 +37,13 @@ Reconnect full device stack and run serial monitor/VOFA+ to tune gesture thresho
 
 ## 7) Recent Thread Note
 Switched firmware from temporary debug branch back to production wiring (MPU on I2C1, OLED on I2C2), removed test telemetry, and reflashed successfully.
+
+## 8) Wireless UART Add-on (2026-03-14)
+- Added USART2 on PA2/PA3 for wireless serial module data channel.
+- Reserved control/status GPIOs for module:
+  - PC8 -> RF_M0 (output, default low)
+  - PC9 -> RF_M1 (output, default low)
+  - PC10 -> RF_AUX (input)
+- App telemetry now mirrors to both USART1 (USB debug) and USART2 (wireless module).
+- Build status: OK (0 errors, 0 warnings).
+- Flash step currently blocked by hardware state once with: "No ST-LINK detected".
