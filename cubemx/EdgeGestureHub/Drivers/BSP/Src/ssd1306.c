@@ -18,6 +18,7 @@ static int s_oled_driver_type = 0;
 
 static uint8_t s_oled_buf[SSD1306_WIDTH * SSD1306_PAGE_COUNT];
 
+/* 发送单字节命令（控制字节 0x00）。 */
 static int ssd1306_write_cmd(uint8_t cmd)
 {
   uint8_t packet[2] = {0x00U, cmd};
@@ -32,6 +33,7 @@ static int ssd1306_write_cmd(uint8_t cmd)
   return 0;
 }
 
+/* 发送一段显示数据（控制字节 0x40）。 */
 static int ssd1306_write_data(const uint8_t *data, uint16_t len)
 {
   uint8_t packet[1 + SSD1306_WIDTH];
@@ -49,6 +51,7 @@ static int ssd1306_write_data(const uint8_t *data, uint16_t len)
   return 0;
 }
 
+/* 在本地显存中画点，不直接访问总线。 */
 static void ssd1306_draw_pixel(int x, int y, int on)
 {
   uint16_t index;
@@ -68,6 +71,7 @@ static void ssd1306_draw_pixel(int x, int y, int on)
   }
 }
 
+/* 返回 5x7 字模列数据（当前仅覆盖业务所需字符）。 */
 static const uint8_t *glyph5x7(char c)
 {
   static const uint8_t g_colon[5] = {0x00, 0x36, 0x36, 0x00, 0x00};
@@ -80,6 +84,8 @@ static const uint8_t *glyph5x7(char c)
   static const uint8_t G[5] = {0x3E, 0x41, 0x49, 0x49, 0x7A};
   static const uint8_t I[5] = {0x00, 0x41, 0x7F, 0x41, 0x00};
   static const uint8_t K[5] = {0x7F, 0x08, 0x14, 0x22, 0x41};
+  static const uint8_t L[5] = {0x7F, 0x40, 0x40, 0x40, 0x40};
+  static const uint8_t M[5] = {0x7F, 0x02, 0x0C, 0x02, 0x7F};
   static const uint8_t N[5] = {0x7F, 0x02, 0x04, 0x08, 0x7F};
   static const uint8_t O[5] = {0x3E, 0x41, 0x41, 0x41, 0x3E};
   static const uint8_t R[5] = {0x7F, 0x09, 0x19, 0x29, 0x46};
@@ -102,6 +108,8 @@ static const uint8_t *glyph5x7(char c)
     case 'G': return G;
     case 'I': return I;
     case 'K': return K;
+    case 'L': return L;
+    case 'M': return M;
     case 'N': return N;
     case 'O': return O;
     case 'R': return R;
@@ -122,6 +130,7 @@ static const uint8_t *glyph5x7(char c)
   }
 }
 
+/* 在显存缓冲区绘制单个字符。 */
 static void ssd1306_draw_char(int x, int y, char c)
 {
   const uint8_t *glyph = glyph5x7(c);
@@ -140,6 +149,7 @@ static void ssd1306_draw_char(int x, int y, char c)
   }
 }
 
+/* 自动探测 OLED 地址（0x3C/0x3D），当前固定走 I2C2。 */
 static int ssd1306_pick_bus_and_addr(void)
 {
   uint16_t cand[] = { (0x3CU << 1), (0x3DU << 1) };
@@ -158,6 +168,7 @@ static int ssd1306_pick_bus_and_addr(void)
   return -1;
 }
 
+/* OLED 初始化：探测设备、下发配置、清屏并刷新。 */
 int SSD1306_Init(void)
 {
   const uint8_t init_seq[] = {
@@ -200,11 +211,13 @@ int SSD1306_Init(void)
   return 0;
 }
 
+/* 清空本地显存。 */
 void SSD1306_Clear(void)
 {
   memset(s_oled_buf, 0, sizeof(s_oled_buf));
 }
 
+/* 从指定坐标绘制字符串到显存。 */
 void SSD1306_DrawString(int x, int y, const char *str)
 {
   int cursor = x;
@@ -223,6 +236,7 @@ void SSD1306_DrawString(int x, int y, const char *str)
   }
 }
 
+/* 分页刷新：将整帧缓冲区发送到 OLED。 */
 void SSD1306_Update(void)
 {
   uint8_t page;
@@ -246,6 +260,7 @@ void SSD1306_Update(void)
   }
 }
 
+/* 导出当前驱动绑定信息，便于串口调试。 */
 int SSD1306_GetDebugInfo(int *bus_index, uint8_t *addr7, int *driver_type)
 {
   if (bus_index != NULL) {

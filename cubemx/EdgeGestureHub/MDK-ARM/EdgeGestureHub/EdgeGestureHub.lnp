@@ -32,6 +32,6 @@
 "edgegesturehub\stm32f4xx_hal_uart.o"
 "edgegesturehub\system_stm32f4xx.o"
 --strict --scatter "EdgeGestureHub\EdgeGestureHub.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+..\..\..\libneai_project-2026-03-15-16-00_3\libneai.a --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "EdgeGestureHub.map" -o EdgeGestureHub\EdgeGestureHub.axf

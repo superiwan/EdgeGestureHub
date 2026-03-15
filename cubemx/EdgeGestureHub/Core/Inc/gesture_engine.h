@@ -27,5 +27,11 @@ void Gesture_Init(void);
 gesture_t Gesture_Run(const imu_frame_t *frame);
 /* 将手势枚举转成可显示字符串。 */
 const char *Gesture_ToString(gesture_t g);
+/* 获取当前三态分类编码：0=学习中，1=正常，2=异常。 */
+int Gesture_GetClassCode(void);
+/* 获取当前三态标签（用于 OLED 显示）。 */
+const char *Gesture_GetClassLabel(void);
+/* 是否已完成学习阶段：0=未完成，1=已完成。 */
+int Gesture_IsLearningDone(void);
 
 #endif

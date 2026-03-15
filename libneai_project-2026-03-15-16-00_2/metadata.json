@@ -1,0 +1,103 @@
+{
+    "accelerators": [],
+    "algorithm_type": "on_board_training",
+    "commit": "HEAD",
+    "compilation_date": "2026-03-15T12:00:24.201249",
+    "compilation_flags": {
+        "float_abi": "hard",
+        "fshort_enums": true,
+        "short_wchar": false
+    },
+    "compilation_str": "{'compilation_dict':{'request_type':'library','api':{'env':'PROD','version':'v3'},'version':{'web_api':{'env':'PROD','version':'v3'},'local_api':{'version':'2026.03.05.0','platform':'win64'},'studio':'5.1.1'},'compilation_flags':{'float_abi':'hard','short_wchar':false,'fshort_enums':true,'use_knowledge':false},'mcu':'cortex-m4_st_stm32f4_stm32f407g-disc1','sensor':'','accelerators':[],'request_origin':'manual','algorithm_type':'on_board_training','lib_version':'v3_3938dd5','info':{'progression':{'evals_done':20000,'optimization_progress':1.0,'elapsed_time':2652,'cpu_info':{'cpu_nb_cores':24,'cpu_nb_cores_for_optimization':16},'state':'finished'},'max_ram':32000,'max_flash':512000,'optimization_global_id':'e2257a7705acdb3bb8a401b0704cc154','version':{'local_api':'2026.03.05.0','studio':'5.1.1'},'creation_date':'2026-03-15T08:23:32+00:00'},'class_names':'nominal,anomaly','results':[{'result_id':46,'combination':{'type':'anomaly_detection','name':'IPCA','params':{'amnestic':5,'rank_percentage':60,'threshold':0.99,'sensitivity':0.5,'tmp_dir_path':null},'preprocessing_chain':[{'extract_features':{'features':['maximum','crest_factor','std','var','mean','minimum'],'entropy_bins':20}},{'pooling':{'strategy':'mean','output_percentage':34}}]},'model':null,'performance':{'performance':{'score':0.9862,'main_kpi':0.9965},'memory_usage':{'estimated_ram':612,'estimated_flash':404,'estimated_flash_knowledge':null}},'learning_min_lines':10,'knowledge':'eNqtVG2PqjgY_Ss3fl5vlLfqJvsB8WUcURxEHLy5IRUqotBiaRGc-N-3ZWY3s8luJrvZfqHPoc_Tc06f9q1TUFRQEqGyTHHS-fXbj7cOqhmFEQuPCDJOUSnQt06KC87COM0RLlOCWwyHJcyLrF0B-r98E8CnnHcgOkGMUSYB4yEQwtm_LWT8baGIYCaYtvnHIwvL9I5EgHmWyd-f8n90clinOc87Mk1gQprQR6iMSxbLTwXbKEcQt98Utwk_xRxhRknRhIcUy2pK7yHqv3UKQrJ3y_6LOcb_ZY7yhTnSj1YmhQwljUD-FPmxW4FoJDTCRNqnao-HFJ2TGGXt9mWaYJiFGcIfZ_qZnZTxLv7D_r7kQyG-SLJiCnMs_E4jEeoiZCfB-kSyWMS978Nhrx1DXTWApsrUUpZmaZWypl0ik0iF6DEjt_Bzdr_3Mb73pAOE5n_5PRTF5QB90B_0jIGOun25MEOQYnFsYQSzLIww-8PUFMeoDlMcHmCJPsjHiKGIvSuVyUUEw4jkBcHCr_drEUMGpadPWjk3Lb9m-cUKb9MXE4bdeVFdqwDNM6pzBVuDaGOPKrdWk4PxOh0tQty4z1XhHw2qA6yS7in39uurt69pU-ycdJhMAs9Jxkk-vgZWsDW01fbJuY0Dbl_MwlIMc3JfcrHTy4GYB9bo5lh3eToK1uBqViA3FtfZyNnYd_dOQycrDaSsu07lzdbg4h6XjXZRlooznLDqXm5fkwHYNmnggPXT-cDXQZIPZi5nzmW_Wpy5a89LY5Vpc0ffTE72tdgmCGzK9ZYz5cUHlWVbKdjom4Jr6nIJ-OsS7IA6NCZOuiFjjyW3a894JaXidHfMOjBrE-xAb1En_BLBO6AwO80AHy9W_ObtizvRyNkE2pxbDo9WoVesKtAzHJvojnp3V4fCV4BiZKkXcTIngc22Pt8Zt6noZ-3peLPjZ6s703pWMnG6k8n5XK3vzU7nPhox1VNHdnEce9yYV7OtQyBZjHns1JERXPOuc90v-rRyX6ezwZWPPK1vjkzT_E3el5g1hWyNjmhGyFSlfT5OsMV-DLSf7b3LxYNaligOMc_FowEphbKTGeVIXkyKzqKlwgq1788_dlDtPPtP08vC92vfed7FqLn56jRiAlxGxbz2p-4m3rnBQNma93rZJODQD1-M5bi7Z0046D7bQ3O2Wyu7wU2wN79k31e-Zv94_A4MwAPt','knowledge_dat':null,'commit_tag_used':'v3_3938dd5'}],'data':{'nb_cols':6,'nb_lines':[[{'file_type':'nominal','nb_lines':143},{'file_type':'anomaly','nb_lines':140},{'file_type':'anomaly','nb_lines':134},{'file_type':'anomaly','nb_lines':208},{'file_type':'anomaly','nb_lines':138}]]},'toolchain_type':'gcc','only_emulators':false},'sign':109754,'license_key':'***'}",
+    "compile_emulators": true,
+    "compile_library": true,
+    "data": {
+        "nb_cols": 6,
+        "nb_lines": [
+            [
+                {
+                    "file_type": "nominal",
+                    "nb_lines": 143
+                },
+                {
+                    "file_type": "anomaly",
+                    "nb_lines": 140
+                },
+                {
+                    "file_type": "anomaly",
+                    "nb_lines": 134
+                },
+                {
+                    "file_type": "anomaly",
+                    "nb_lines": 208
+                },
+                {
+                    "file_type": "anomaly",
+                    "nb_lines": 138
+                }
+            ]
+        ]
+    },
+    "learning_min_lines": 10,
+    "lib_limited": false,
+    "library_id": "69b69f58c3c5cf469f22d586",
+    "library_md5sum": "db005406dcff26483cf2715105d61e6a",
+    "mcu": "cortex-m4_st_stm32f4_stm32f407g-disc1",
+    "mcu_cpn": "STM32F407G-DISC1",
+    "mcu_display_name": "STM32F407G-DISC1 - STMicroelectronics",
+    "mcu_family": "STM32F4 Series",
+    "mcu_group": "demo",
+    "mcu_type": "cortex-m4",
+    "mcu_vendor": "STMicroelectronics",
+    "optimization_info": {
+        "creation_date": "2026-03-15T08:23:32+00:00",
+        "max_flash": 512000,
+        "max_ram": 32000,
+        "optimization_global_id": "e2257a7705acdb3bb8a401b0704cc154",
+        "progression": {
+            "cpu_info": {
+                "cpu_nb_cores": 24,
+                "cpu_nb_cores_for_optimization": 16
+            },
+            "elapsed_time": 2652,
+            "evals_done": 20000,
+            "optimization_progress": 1.0,
+            "state": "finished"
+        },
+        "version": {
+            "local_api": "2026.03.05.0",
+            "studio": "5.1.1"
+        }
+    },
+    "performance": {
+        "memory_usage": {
+            "estimated_flash": 404,
+            "estimated_flash_knowledge": null,
+            "estimated_ram": 612
+        },
+        "performance": {
+            "main_kpi": 0.9965,
+            "score": 0.9862
+        }
+    },
+    "request_type": "library",
+    "sensor": "",
+    "studio_info": {
+        "local_api": {
+            "platform": "win64",
+            "version": "2026.03.05.0"
+        },
+        "studio": "5.1.1",
+        "web_api": {
+            "env": "PROD",
+            "version": "v3"
+        }
+    },
+    "toolchain_version": "arm-none-eabi-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009",
+    "user_info": {
+        "company": "Guet",
+        "email": "3119723531@qq.com",
+        "first_name": "Jack",
+        "last_name": "Oo"
+    }
+}

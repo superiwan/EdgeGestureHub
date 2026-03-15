@@ -1,4 +1,4 @@
-﻿/* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file           : main.c
@@ -84,6 +84,7 @@ int main(void)
   MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
+  /* 进入业务层初始化：后续自定义模块都从这里接管。 */
   App_Init();
   /* USER CODE END 2 */
 
@@ -94,6 +95,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    /* 业务主循环：内部做分时调度（采样/识别/上报/显示）。 */
     App_Loop();
     /* USER CODE END 3 */
   }

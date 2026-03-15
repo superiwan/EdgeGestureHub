@@ -1,4 +1,4 @@
-﻿#include "mpu6050.h"
+#include "mpu6050.h"
 #include "i2c.h"
 
 #include <stddef.h>
@@ -21,6 +21,7 @@
 #define MPU6050_GYRO_LSB_PER_DPS    131.0f
 #define MPU6050_GRAVITY_MS2          9.80665f
 
+/* 写单个寄存器。 */
 static int mpu6050_write_reg(uint8_t reg, uint8_t val)
 {
   if (HAL_I2C_Mem_Write(&hi2c1,
@@ -35,6 +36,7 @@ static int mpu6050_write_reg(uint8_t reg, uint8_t val)
   return 0;
 }
 
+/* 从指定寄存器开始连续读取 len 字节。 */
 static int mpu6050_read_regs(uint8_t reg, uint8_t *buf, uint16_t len)
 {
   if (HAL_I2C_Mem_Read(&hi2c1,
@@ -49,11 +51,13 @@ static int mpu6050_read_regs(uint8_t reg, uint8_t *buf, uint16_t len)
   return 0;
 }
 
+/* MPU6050 输出为高字节在前，将其转为有符号 16 位。 */
 static int16_t be16_to_i16(const uint8_t *p)
 {
   return (int16_t)((int16_t)(p[0] << 8) | p[1]);
 }
 
+/* 初始化流程：在线检查 -> 唤醒 -> 采样率/DLPF/量程配置。 */
 int MPU6050_Init(void)
 {
   uint8_t whoami = 0U;
@@ -92,6 +96,7 @@ int MPU6050_Init(void)
   return 0;
 }
 
+/* 读取并换算一帧数据：原始寄存器值 -> m/s^2、deg/s、摄氏度。 */
 int MPU6050_ReadFrame(imu_frame_t *out)
 {
   uint8_t raw[14];

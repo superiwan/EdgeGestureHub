@@ -18,8 +18,9 @@ $StlinkInterface = 'SWD'
 
 # UART monitor
 $SerialPort = 'auto'
-$BaudRate = 115200
+$BaudRate = 9600
 $LogPath = Join-Path $Root 'logs\\uart.log'
 
 # Ensure runtime folders exist
 $null = New-Item -ItemType Directory -Force -Path (Join-Path $Root 'Objects'), (Join-Path $Root 'logs')
+
