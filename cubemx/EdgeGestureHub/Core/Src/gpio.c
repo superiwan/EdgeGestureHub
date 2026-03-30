@@ -1,4 +1,4 @@
-﻿/* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    gpio.c
@@ -47,7 +47,7 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, RF_MD0_Pin, GPIO_PIN_RESET);
 
   /* 状态灯 */
-  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET)                                                                 ;
 
   /* PC8 -> RF_MD0 输出 */
   GPIO_InitStruct.Pin = RF_MD0_Pin;

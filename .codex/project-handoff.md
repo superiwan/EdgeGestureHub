@@ -59,3 +59,6 @@ Finalized wireless strategy for now as PA2/PA3 data-only (MD0/AUX not connected)
 
 - 2026-03-15: Fixed Keil+NanoEdge integration with new ARM toolchain library (libneai_project-2026-03-15-16-00_3). Resolved build/link issues by setting project C compiler attributes to match library ABI (EnumInt=1, vShortWch=0, C MiscControls=--wchar32) and library path to ..\\..\\..\\libneai_project-2026-03-15-16-00_3\\libneai.a. Build and flash now succeed; generated HEX contains STATUS/LEARN/NORM/ANOM strings (no Gesture string).
 
+
+- 2026-03-15: Implemented business action in control_logic.c: ANOM double-click toggles onboard LED (PD12). Added edge-trigger detection, 500ms double-click window, and 1s cooldown with Chinese comments. Build and flash completed successfully.
+
