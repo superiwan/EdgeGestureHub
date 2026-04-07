@@ -38,6 +38,38 @@
       "problemMatcher": []
     },
     {
+      "label": "STM32: Start GDB Server",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\tools\\Invoke-StlinkGdbServer.ps1",
+        "-Action",
+        "Start",
+        "-GdbServerPath",
+        "${config:stm32.stlinkGdbServerPath}",
+        "-ProgrammerPath",
+        "C:\\Users\\prohibit\\AppData\\Local\\stm32cube\\bundles\\programmer\\2.22.0+st.1\\bin"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "STM32: Stop GDB Server",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\tools\\Invoke-StlinkGdbServer.ps1",
+        "-Action",
+        "Stop"
+      ],
+      "problemMatcher": []
+    },
+    {
       "label": "STM32: Configure",
       "type": "shell",
       "command": "powershell",
