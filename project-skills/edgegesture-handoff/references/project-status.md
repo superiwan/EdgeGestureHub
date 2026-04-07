@@ -1,0 +1,3 @@
+- what changed: 新增更省事的 VSCode 任务：`STM32: Build and Flash`、`STM32: Rebuild and Flash`、`STM32: Quick Start`；README 已补充最简单的点法。
+- current blocker or risk: 现有 `.ioc` 仍和业务源码不完全同步；Keil 继续用 `libneai_project-2026-03-15-16-00_3`，VSCode/GCC 改为使用 `libneai_project-2026-03-15-16-00_2`；如果后面再用 CubeMX 重生，需要保住 `I2C1=100k`、`USART2=9600` 和业务层入口。
+- exact next recommended step: 在 VSCode 里直接运行 `STM32: Quick Start` 或 `STM32: Build and Flash`，确认板上烧录和运行正常；之后再决定是否继续整理 `.ioc`。

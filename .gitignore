@@ -1,0 +1,27 @@
+# Local tool state
+.omx/
+
+# CMake outputs
+build/
+.tmp_cubemx_cmake/
+
+# Keil / ARM build outputs
+Objects/
+cubemx/EdgeGestureHub/MDK-ARM/Objects/
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.axf
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.bin
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.crf
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.d
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.dep
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.hex
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.htm
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.lnp
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.lst
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.map
+cubemx/EdgeGestureHub/MDK-ARM/EdgeGestureHub/*.o
+cubemx/EdgeGestureHub/MDK-ARM/*.uvguix.*
+cubemx/EdgeGestureHub/MDK-ARM/*.uvoptx
+cubemx/EdgeGestureHub/MDK-ARM/startup_stm32f407xx.lst
+
+# Downloaded archives
+libneai_project-*.zip

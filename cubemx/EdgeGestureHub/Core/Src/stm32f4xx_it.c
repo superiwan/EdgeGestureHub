@@ -1,4 +1,4 @@
-﻿/* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file    stm32f4xx_it.c
@@ -17,54 +17,54 @@
   */
 /* USER CODE END Header */
 
-/* 头文件 ------------------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
-/* 私有头文件 ----------------------------------------------------------*/
+/* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
 
-/* 私有类型定义 -----------------------------------------------------------*/
+/* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
 
 /* USER CODE END TD */
 
-/* 私有宏定义 ------------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
 /* USER CODE END PD */
 
-/* 私有宏 -------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
 /* USER CODE END PM */
 
-/* 私有变量 ---------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
 
-/* 私有函数声明 -----------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
-/* 私有用户代码 ---------------------------------------------------------*/
+/* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
 
-/* 外部变量 --------------------------------------------------------*/
+/* External variables --------------------------------------------------------*/
 
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
 
 /******************************************************************************/
-/*           Cortex-M4 处理器中断与异常处理函数          */
+/*           Cortex-M4 Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
-  * @brief 该函数处理不可屏蔽中断。
+  * @brief This function handles Non maskable interrupt.
   */
 void NMI_Handler(void)
 {
@@ -79,7 +79,7 @@ void NMI_Handler(void)
 }
 
 /**
-  * @brief 该函数处理硬件故障中断。
+  * @brief This function handles Hard fault interrupt.
   */
 void HardFault_Handler(void)
 {
@@ -94,7 +94,7 @@ void HardFault_Handler(void)
 }
 
 /**
-  * @brief 该函数处理内存管理故障。
+  * @brief This function handles Memory management fault.
   */
 void MemManage_Handler(void)
 {
@@ -109,7 +109,7 @@ void MemManage_Handler(void)
 }
 
 /**
-  * @brief 该函数处理预取故障与内存访问故障。
+  * @brief This function handles Pre-fetch fault, memory access fault.
   */
 void BusFault_Handler(void)
 {
@@ -124,7 +124,7 @@ void BusFault_Handler(void)
 }
 
 /**
-  * @brief 该函数处理未定义指令或非法状态。
+  * @brief This function handles Undefined instruction or illegal state.
   */
 void UsageFault_Handler(void)
 {
@@ -139,7 +139,7 @@ void UsageFault_Handler(void)
 }
 
 /**
-  * @brief 该函数处理通过 SWI 指令触发的系统服务调用。
+  * @brief This function handles System service call via SWI instruction.
   */
 void SVC_Handler(void)
 {
@@ -152,7 +152,7 @@ void SVC_Handler(void)
 }
 
 /**
-  * @brief 该函数处理调试监视器。
+  * @brief This function handles Debug monitor.
   */
 void DebugMon_Handler(void)
 {
@@ -165,7 +165,7 @@ void DebugMon_Handler(void)
 }
 
 /**
-  * @brief 该函数处理系统服务挂起请求。
+  * @brief This function handles Pendable request for system service.
   */
 void PendSV_Handler(void)
 {
@@ -178,7 +178,7 @@ void PendSV_Handler(void)
 }
 
 /**
-  * @brief 该函数处理系统滴答定时器。
+  * @brief This function handles System tick timer.
   */
 void SysTick_Handler(void)
 {
@@ -192,15 +192,12 @@ void SysTick_Handler(void)
 }
 
 /******************************************************************************/
-/* STM32F4xx 外设中断处理函数                                    */
-/* 在此添加已使用外设的中断处理函数。                  */
-/* 可用的外设中断处理函数名称，                      */
-/* 请参考启动文件（startup_stm32f4xx.s）。                    */
+/* STM32F4xx Peripheral Interrupt Handlers                                    */
+/* Add here the Interrupt Handlers for the used peripherals.                  */
+/* For the available peripheral interrupt handler names,                      */
+/* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
 
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
-
-
-

@@ -59,6 +59,7 @@ void SystemClock_Config(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
 
@@ -79,10 +80,9 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C1_Init();
-  MX_I2C2_Init();
   MX_USART1_UART_Init();
+  MX_I2C2_Init();
   MX_USART2_UART_Init();
-
   /* USER CODE BEGIN 2 */
   /* 进入业务层初始化：后续自定义模块都从这里接管。 */
   App_Init();
@@ -179,6 +179,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-
-

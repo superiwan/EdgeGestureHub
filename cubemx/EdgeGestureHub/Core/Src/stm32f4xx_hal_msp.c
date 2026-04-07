@@ -1,4 +1,4 @@
-﻿/* USER CODE BEGIN Header */
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
   * @file         stm32f4xx_hal_msp.c
@@ -18,38 +18,38 @@
   */
 /* USER CODE END Header */
 
-/* 头文件 ------------------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
 #include "main.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-/* 私有类型定义 -----------------------------------------------------------*/
+/* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
 
 /* USER CODE END TD */
 
-/* 私有宏定义 ------------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN Define */
 
 /* USER CODE END Define */
 
-/* 私有宏 -------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN Macro */
 
 /* USER CODE END Macro */
 
-/* 私有变量 ---------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
 
-/* 私有函数声明 -----------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
-/* 外部函数 --------------------------------------------------------*/
+/* External functions --------------------------------------------------------*/
 /* USER CODE BEGIN ExternalFunctions */
 
 /* USER CODE END ExternalFunctions */
@@ -58,7 +58,7 @@
 
 /* USER CODE END 0 */
 /**
-  * 初始化全局 MSP。
+  * Initializes the Global MSP.
   */
 void HAL_MspInit(void)
 {
@@ -70,7 +70,7 @@ void HAL_MspInit(void)
   __HAL_RCC_SYSCFG_CLK_ENABLE();
   __HAL_RCC_PWR_CLK_ENABLE();
 
-  /* 系统中断初始化*/
+  /* System interrupt init*/
 
   /* USER CODE BEGIN MspInit 1 */
 
@@ -80,4 +80,3 @@ void HAL_MspInit(void)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
-

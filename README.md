@@ -137,3 +137,57 @@ LED 联动验收：
 
 - 在 `control_logic.c` 中把 LED 业务替换为你的目标业务（继电器/命令发送/页面切换等）
 - 保留本版本作为稳定基线（建议打包备份）
+
+---
+
+## 10. VSCode 直接编译与烧录
+
+这个工程现在已经补好了 VSCode 工作流，主工程目录是：
+
+- `cubemx/EdgeGestureHub`
+
+VSCode 里直接使用下面这些任务：
+
+- `STM32: Check Environment`
+- `STM32: Generate From CubeMX`
+- `STM32: Build`
+- `STM32: Build and Flash`
+- `STM32: Rebuild and Flash`
+- `STM32: Quick Start`
+- `STM32: Flash`
+- `STM32: Erase Chip`
+
+调试入口：
+
+- `STM32: Debug active CMake target`
+
+这套配置已经接入：
+
+- `CMake`
+- `Ninja`
+- `STM32CubeMX`
+- `STM32CubeProgrammer`
+- `ST-LINK_gdbserver`
+
+说明：
+
+- `Keil` 继续使用 `libneai_project-2026-03-15-16-00_3\libneai.a`
+- `VSCode + GCC` 这条线改为使用 `libneai_project-2026-03-15-16-00_2\libneai.a`
+
+如果重新改了 `.ioc`，先执行：
+
+- `STM32: Generate From CubeMX`
+
+再执行：
+
+- `STM32: Build`
+- `STM32: Flash`
+
+最省事的用法：
+
+- 只想直接试一次：
+  - `终端 -> 运行任务 -> STM32: Quick Start`
+- 已经编译过，只想重新下到板子：
+  - `终端 -> 运行任务 -> STM32: Build and Flash`
+- 改动较大，想强制从头来一遍：
+  - `终端 -> 运行任务 -> STM32: Rebuild and Flash`
