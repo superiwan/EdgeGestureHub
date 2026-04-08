@@ -1,24 +1,28 @@
-{
-  "cmake.configureOnOpen": false,
-  "cmake.generator": "Ninja",
-  "cmake.sourceDirectory": "${workspaceFolder}",
-  "cmake.buildDirectory": "${workspaceFolder}/build",
-  "cmake.configureArgs": [
-    "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/gcc-arm-none-eabi.cmake"
-  ],
-  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "files.associations": {
-    "*.ioc": "ini"
-  },
-  "stm32.projectRoot": "${workspaceFolder}",
-  "stm32.iocFile": "${workspaceFolder}/cubemx/EdgeGestureHub/EdgeGestureHub.ioc",
-  "stm32.projectName": "EdgeGestureHub",
-  "stm32.device": "STM32F407VET6",
-  "stm32.interface": "swd",
-  "stm32.runToEntryPoint": "main",
-  "stm32.flashAddress": "0x08000000",
-  "stm32.cubeMxPath": "C:\\Program Files\\STMicroelectronics\\STM32Cube\\STM32CubeMX\\STM32CubeMX.exe",
-  "stm32.cubeProgrammerPath": "C:\\Users\\prohibit\\AppData\\Local\\stm32cube\\bundles\\programmer\\2.22.0+st.1\\bin\\STM32_Programmer_CLI.exe",
-  "stm32.toolchainGdbPath": "C:\\Program Files (x86)\\Arm GNU Toolchain arm-none-eabi\\14.2 rel1\\bin\\arm-none-eabi-gdb.exe",
-  "stm32.stlinkGdbServerPath": "C:\\Users\\prohibit\\AppData\\Local\\stm32cube\\bundles\\stlink-gdbserver\\7.13.0+st.3\\bin\\ST-LINK_gdbserver.exe"
+﻿{
+    "cmake.configureOnOpen":  false,
+    "cmake.generator":  "Ninja",
+    "cmake.sourceDirectory":  "${workspaceFolder}",
+    "cmake.buildDirectory":  "${workspaceFolder}/build/Debug",
+    "C_Cpp.default.configurationProvider":  "ms-vscode.cmake-tools",
+    "C_Cpp.intelliSenseEngine":  "Disabled",
+    "C_Cpp.errorSquiggles":  "Disabled",
+    "files.associations":  {
+                               "*.ioc":  "ini"
+                           },
+    "clangd.arguments":  [
+                             "--background-index",
+                             "--compile-commands-dir=build/Debug",
+                             "--query-driver=C:/PROGRA~2/ARMGNU~1/*/bin/*,C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/*/bin/*"
+                         ],
+    "stm32.projectRoot":  "${workspaceFolder}",
+    "stm32.iocFile":  "${workspaceFolder}/EdgeGestureHub.ioc",
+    "stm32.projectName":  "EdgeGestureHub",
+    "stm32.device":  "STM32F407VET6",
+    "stm32.interface":  "swd",
+    "stm32.runToEntryPoint":  "main",
+    "stm32.flashAddress":  "0x08000000",
+    "stm32.cubeMxPath":  "C:\\Program Files\\STMicroelectronics\\STM32Cube\\STM32CubeMX\\STM32CubeMX.exe",
+    "stm32.cubeProgrammerPath":  "C:\\Users\\prohibit\\AppData\\Local\\stm32cube\\bundles\\programmer\\2.22.0+st.1\\bin\\STM32_Programmer_CLI.exe",
+    "stm32.toolchainGdbPath":  "C:\\Program Files (x86)\\Arm GNU Toolchain arm-none-eabi\\14.2 rel1\\bin\\arm-none-eabi-gdb.exe",
+    "stm32.stlinkGdbServerPath":  "C:\\Users\\prohibit\\AppData\\Local\\stm32cube\\bundles\\stlink-gdbserver\\7.13.0+st.3\\bin\\ST-LINK_gdbserver.exe"
 }

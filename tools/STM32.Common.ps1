@@ -46,7 +46,7 @@ function Find-ToolInRoots {
     )
 
     foreach ($root in ($Roots | Where-Object { $_ -and (Test-Path -LiteralPath $_) })) {
-        $match = Get-ChildItem -Path $root -Filter $FileName -File -Recurse -ErrorAction SilentlyContinue |
+        $match = Get-ChildItem -LiteralPath $root -Filter $FileName -File -Recurse -ErrorAction SilentlyContinue |
             Select-Object -First 1 -ExpandProperty FullName
 
         if ($match) {
@@ -158,13 +158,13 @@ function Get-SingleIocFile {
         return $resolved
     }
 
-    $iocFiles = Get-ChildItem -Path $WorkspaceRoot -Filter *.ioc -File -Recurse -ErrorAction SilentlyContinue
+    $iocFiles = Get-ChildItem -LiteralPath $WorkspaceRoot -Filter *.ioc -File -Recurse -ErrorAction SilentlyContinue
     if ($iocFiles.Count -eq 1) {
         return $iocFiles[0].FullName
     }
 
     if ($iocFiles.Count -gt 1) {
-        throw "检测到多个 .ioc 文件，请在 .vscode/settings.json 里设置 stm32.iocFile。"
+        throw "检测到多个 .ioc 文件。请先运行 Initialize-Stm32Workspace.ps1，或在本地 .vscode/settings.json 里设置 stm32.iocFile。"
     }
 
     throw "工作区里没有找到 .ioc 文件。"
@@ -180,7 +180,8 @@ function Get-BuildArtifact {
         throw "构建目录不存在：$BuildDir"
     }
 
-    $artifacts = Get-ChildItem -Path $BuildDir -File -Recurse -Include *.elf, *.hex, *.bin -ErrorAction SilentlyContinue |
+    $artifacts = Get-ChildItem -LiteralPath $BuildDir -File -Recurse -ErrorAction SilentlyContinue |
+        Where-Object { $_.Extension -in @(".elf", ".hex", ".bin") } |
         Sort-Object LastWriteTime -Descending
 
     if (-not $artifacts) {
