@@ -27,13 +27,39 @@
         "-WorkspaceRoot",
         "${workspaceFolder}",
         "-ProjectRoot",
-        "${workspaceFolder}\\cubemx\\EdgeGestureHub",
+        "${config:stm32.projectRoot}",
         "-IocPath",
         "${config:stm32.iocFile}",
         "-ProjectName",
-        "${config:stm32.projectName}",
-        "-CubeMxPath",
-        "${config:stm32.cubeMxPath}"
+        "${config:stm32.projectName}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "STM32: Start GDB Server",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\tools\\Invoke-StlinkGdbServer.ps1",
+        "-Action",
+        "Start"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "STM32: Stop GDB Server",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\tools\\Invoke-StlinkGdbServer.ps1",
+        "-Action",
+        "Stop"
       ],
       "problemMatcher": []
     },
@@ -87,9 +113,7 @@
         "-BuildDir",
         "${workspaceFolder}\\build\\Debug",
         "-BuildType",
-        "Debug",
-        "-ToolchainFile",
-        "${workspaceFolder}\\cmake\\gcc-arm-none-eabi.cmake"
+        "Debug"
       ],
       "problemMatcher": "$gcc"
     },
@@ -111,9 +135,7 @@
         "-BuildDir",
         "${workspaceFolder}\\build\\Debug",
         "-BuildType",
-        "Debug",
-        "-ToolchainFile",
-        "${workspaceFolder}\\cmake\\gcc-arm-none-eabi.cmake"
+        "Debug"
       ],
       "group": {
         "kind": "build",
@@ -171,8 +193,6 @@
         "${workspaceFolder}",
         "-BuildDir",
         "${workspaceFolder}\\build\\Debug",
-        "-ProgrammerPath",
-        "${config:stm32.cubeProgrammerPath}",
         "-FlashAddress",
         "${config:stm32.flashAddress}"
       ],
@@ -189,8 +209,6 @@
         "${workspaceFolder}\\tools\\Invoke-Stm32Flash.ps1",
         "-WorkspaceRoot",
         "${workspaceFolder}",
-        "-ProgrammerPath",
-        "${config:stm32.cubeProgrammerPath}",
         "-EraseOnly"
       ],
       "problemMatcher": []
@@ -206,6 +224,8 @@
         "${workspaceFolder}\\tools\\Invoke-Stm32CubeMXGenerate.ps1",
         "-WorkspaceRoot",
         "${workspaceFolder}",
+        "-ProjectRoot",
+        "${config:stm32.projectRoot}",
         "-IocPath",
         "${config:stm32.iocFile}",
         "-CubeMxPath",

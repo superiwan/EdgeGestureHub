@@ -1,4 +1,4 @@
-#MicroXplorer Configuration settings - do not modify
+﻿#MicroXplorer Configuration settings - do not modify
 CAD.formats=
 CAD.pinconfig=
 CAD.provider=
@@ -163,3 +163,9 @@ USART2.VirtualMode=VM_ASYNC
 VP_SYS_VS_Systick.Mode=SysTick
 VP_SYS_VS_Systick.Signal=SYS_VS_Systick
 board=custom
+
+
+
+
+
+

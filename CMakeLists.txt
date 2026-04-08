@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.22)
 
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cmake/gcc-arm-none-eabi.cmake")
+endif()
+
 project(EdgeGestureHub C ASM)
 
 set(CMAKE_C_STANDARD 11)
